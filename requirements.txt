@@ -1,0 +1,5 @@
+matplotlib
+nilearn
+numpy
+torch
+tqdm
