@@ -1,7 +1,7 @@
 # OHBM 2019 - Deep Brain Synthesis Tutorial
 Deep brain synthesis tutorial for the 2019 Organization for Human Brain Mapping Conference in Rome using 3D Conditional Improved Conditional Wasserstein Generative Adversarial Networks on the [Neurovault](https://neurovault.org) Collection 1952 [BrainPedia](https://neurovault.org/collections/1952/) dataset.
 
-#### Instructions
+### Instructions
 1. Clone the repository:
 ```
 git clone https://github.com/BlissChapman/OHBMDeepBrainSynthesisTutorial
@@ -21,7 +21,7 @@ jupyter notebook
 4. Select Tutorial.ipynb and enjoy!
 
 
-#### References
+### References
 M. Arjovsky, S. Chintala, and L. Bottou. Wasserstein GANs. arXiv preprint arXiv:1701.07875, 2017.
 
 J. Dubois and R. Adolphs. Building a science of individual differences from fMRI. Trends in cognitive sciences, 2016.
@@ -34,6 +34,6 @@ I. Gulrajani, F. Ahmed,M. Arjovsky, V. Dumoulin, and A. Courville. Improved trai
 
 M. Mirza and S. Osindero. Conditional Generative Adversarial Nets. arXiv preprint arXiv:1411.1784, 2014.
 
-#### Contact Information
-Sanmi Koyejo  - sanmi@illinois.edu
-Bliss Chapman - bliss.chapman@gmail.com
+### Contact Information
+- Sanmi Koyejo  - sanmi@illinois.edu
+- Bliss Chapman - bliss.chapman@gmail.com
