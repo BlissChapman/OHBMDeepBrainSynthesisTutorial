@@ -11,6 +11,8 @@ import nilearn.masking as masking
 
 class Preprocessor:
     """
+    Brainpedia.Preprocessor encapsulates logic around preprocessing the raw NeuroVault collection 1952 dataset
+    including downsampling/normalizing brain data and massaging metadata tags.
     """
 
     def __init__(self,

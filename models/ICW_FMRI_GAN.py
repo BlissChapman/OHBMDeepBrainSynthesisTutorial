@@ -2,6 +2,7 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 import torch.optim as optim
+
 from torch.autograd import Variable, grad
 
 
@@ -72,7 +73,7 @@ class Generator(nn.Module):
 
         # Linear and reshape labels:
         labels_out = self.fc_labels_1(labels)
-        labels_out = F.tanh(labels_out)
+        labels_out = torch.tanh(labels_out)
         labels_out = labels_out.view(-1, self.conditioning_dimensionality, out.shape[2], out.shape[3], out.shape[4])
         out = torch.cat((out, labels_out), 1)
 
@@ -83,7 +84,7 @@ class Generator(nn.Module):
 
         # Linear and reshape label volume:
         labels_out = self.fc_labels_2(labels)
-        labels_out = F.tanh(labels_out)
+        labels_out = torch.tanh(labels_out)
         labels_out = labels_out.view(-1, self.conditioning_dimensionality, out.shape[2], out.shape[3], out.shape[4])
         out = torch.cat((out, labels_out), 1)
 
@@ -94,13 +95,13 @@ class Generator(nn.Module):
 
         # Linear and reshape label volume:
         labels_out = self.fc_labels_3(labels)
-        labels_out = F.tanh(labels_out)
+        labels_out = torch.tanh(labels_out)
         labels_out = labels_out.view(-1, self.conditioning_dimensionality, out.shape[2], out.shape[3], out.shape[4])
         out = torch.cat((out, labels_out), 1)
 
         # Deconv 3
         out = self.deconv_3(out)
-        out = F.tanh(out)
+        out = torch.tanh(out)
 
         # Linear and reshape
         out = out.view(-1, 16 * 16 * 16)
@@ -160,7 +161,7 @@ class Critic(nn.Module):
 
         # Linear and reshape label volume:
         labels_out = self.fc_labels_1(labels)
-        labels_out = F.tanh(labels_out)
+        labels_out = torch.tanh(labels_out)
         labels_out = labels_out.view(-1, self.conditioning_dimensionality, out.shape[2], out.shape[3], out.shape[4])
         out = torch.cat((out, labels_out), 1)
 
@@ -170,7 +171,7 @@ class Critic(nn.Module):
 
         # Linear and reshape label volume:
         labels_out = self.fc_labels_2(labels)
-        labels_out = F.tanh(labels_out)
+        labels_out = torch.tanh(labels_out)
         labels_out = labels_out.view(-1, self.conditioning_dimensionality, out.shape[2], out.shape[3], out.shape[4])
         out = torch.cat((out, labels_out), 1)
 
@@ -181,7 +182,7 @@ class Critic(nn.Module):
 
         # Linear and reshape label volume:
         labels_out = self.fc_labels_3(labels)
-        labels_out = F.tanh(labels_out)
+        labels_out = torch.tanh(labels_out)
         labels_out = labels_out.view(-1, self.conditioning_dimensionality, out.shape[2], out.shape[3], out.shape[4])
         out = torch.cat((out, labels_out), 1)
 

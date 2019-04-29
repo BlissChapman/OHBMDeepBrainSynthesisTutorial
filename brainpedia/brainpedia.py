@@ -5,9 +5,14 @@ from brainpedia.preprocessor import Preprocessor
 from nilearn.datasets import fetch_neurovault_ids
 
 
-class Brainpedia:
+class BrainPedia:
     """
+    Brainpedia encapsulates logic around downloading, preprocessing, caching, and loading NeuroVault Collection
+    1952 commonly referred to as BrainPedia.
     """
+    
+    def downloadIfNecessary(root_dir='./'):
+        fetch_neurovault_ids(collection_ids=[1952], data_dir=root_dir)
 
     def __init__(self, data_dirs, cache_dir, scale, multi_tag_label_encoding=True):
         self.data_dirs = data_dirs
