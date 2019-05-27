@@ -10,10 +10,10 @@ git clone https://github.com/BlissChapman/OHBMDeepBrainSynthesisTutorial
 2. Install dependencies:
 ```
 cd OHBMDeepBrainSynthesisTutorial
-pip install -r requirements.txt
+python3 -m pip install -r requirements.txt --user
 ```
 
-3. Start the Jupyter notebook server:
+3. Start a [Jupyter notebook](https://jupyter.org/install) server:
 ```
 jupyter notebook
 ```
