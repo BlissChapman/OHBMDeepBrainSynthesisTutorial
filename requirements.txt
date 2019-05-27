@@ -3,4 +3,5 @@ nibabel
 nilearn
 numpy
 torch
+torchvision
 tqdm
