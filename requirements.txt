@@ -1,9 +1,7 @@
-json
 matplotlib
 nibabel
 nilearn
 numpy
-pickle
 torch
 torchvision
 tqdm
